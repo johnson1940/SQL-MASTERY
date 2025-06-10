@@ -1,3 +1,8 @@
+-- INNER JOINS  - Fetch only the common or related data between the two tables
+-- LEFT JOINS   - Fetch all the records from left table , matching row from the right table. If no match, show null on the right table
+-- RIGHT JOINS  - Fetch all the records from right table , matching row from the left table. If no match, show null on the left table
+
+
 DROP TABLE department CASCADE;
 DROP TABLE manager CASCADE;
 DROP TABLE employee CASCADE;
