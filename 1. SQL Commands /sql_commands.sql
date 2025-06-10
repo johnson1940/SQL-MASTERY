@@ -5,7 +5,7 @@
 | **DQL**  | SELECT, JOIN                  |
 | **TCL**  | BEGIN, COMMIT, ROLLBACK       |
 | **DCL**  | GRANT, REVOKE                 |
-
+	
   
 -- Create Students Table
 DROP TABLE IF EXISTS Students CASCADE;
@@ -64,7 +64,7 @@ SELECT * FROM Courses;
 
 -- Get enrollments with student names and course names
 SELECT
-     e.enrollment_id,
+         e.enrollment_id,
 	 s.student_name,
 	 s.department,
 	 c.course_name,
