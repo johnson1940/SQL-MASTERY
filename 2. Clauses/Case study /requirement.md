@@ -35,11 +35,11 @@ As the Data Analyst for TechCorp, you’ve been asked to generate reports to hel
 ### 1. Employee Distribution
 
 **Find the total number of employees in each department.**
-SELECT department, COUNT(*) AS num_employees
-FROM Employees
-GROUP BY department;
 
 > **Why?** To see which departments are growing the fastest.
+> SELECT department, COUNT(*) AS num_employees
+FROM Employees
+GROUP BY department;
 
 ### 2. Budget Planning
 
