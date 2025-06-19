@@ -77,5 +77,29 @@ WHERE dept_name NOT IN (SELECT DISTINCT dept_name FROM employee);
 
 
 -- Correlated subquery 
+-- A subquery which related to the outer query 
 
+/* QUESTION : Find the employees in each department who earn more than
+the average salary in that department
+
+1. A correlated subquery is a subquery that references columns from the outer query.
+2. For each row in employee e1, the subquery runs once to calculate the average salary of that department.
+*/
+
+
+SELECT *
+FROM employee e1
+WHERE salary > (SELECT avg(salary)
+                FROM employee e2
+				WHERE e2.dept_name = e1.dept_name
+              )
+
+
+-- Find department who do not have any employees
+
+SELECT *
+FROM department d
+WHERE NOT EXISTS (
+                 SELECT 1 FROM employee e
+		 WHERE e.dept_name = d.dept_name);
 							  
